@@ -36,6 +36,7 @@ curl http://localhost:3000/books
 ├── scripts/      # 工具脚本（建库等）
 ├── sql/          # 表结构与初始数据
 ├── data/         # SQLite 数据文件（已加入 .gitignore）
+├── .claude/plan/ # 分里程碑的详细计划
 └── README.md
 ```
 
@@ -61,6 +62,8 @@ curl http://localhost:3000/books
 | GET | `/books?page=1&pageSize=10` | 图书列表（分页，含作者与分类） |
 
 ## 路线图
+
+> 每个里程碑的详细计划放在 `.claude/plan/`：001（已完成）、002（进行中）。
 
 - [x] **M1 地基**：Express + SQLite、7 张表、图书列表接口
 - [ ] **M2 借阅闭环**：借书 `POST /loans`、还书、逾期查询；事务与并发保护
