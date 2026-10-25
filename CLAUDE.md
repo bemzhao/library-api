@@ -9,7 +9,7 @@
 ## 关键事实
 
 - Library API：本地图书馆后端，用于学习 Node.js + 关系型数据库
-- Node.js 20 + Express 5 + SQLite（better-sqlite3），原生 SQL，暂不用 ORM
+- Node.js 24（≥ 24.22.1）+ Express 5 + SQLite（better-sqlite3），原生 SQL，暂不用 ORM
 - 本地端口 3000；数据文件 `data/library.db`，不入库
 
 ## 命令

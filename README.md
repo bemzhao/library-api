@@ -6,12 +6,14 @@
 
 | 层 | 选择 | 说明 |
 |---|---|---|
-| 运行时 | Node.js 20 | |
+| 运行时 | Node.js 24（≥ 24.22.1） | |
 | Web 框架 | Express 5 | |
 | 数据库 | SQLite（better-sqlite3） | 本地零依赖、便于起步；后续迁移 PostgreSQL |
 | 数据访问 | 原生 SQL | 先理解 SQL，再考虑引入 ORM |
 
 ## 快速开始
+
+需要 Node.js ≥ 24.22.1（用 nvm 的话，项目根目录已提供 `.nvmrc`，执行 `nvm use` 即可）。
 
 ```bash
 npm install

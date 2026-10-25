@@ -13,8 +13,14 @@
   "license": "ISC",
   "description": "",
   "type": "module",
+  "engines": {
+    "node": ">=24.22.1"
+  },
   "dependencies": {
     "better-sqlite3": "^12.11.1",
     "express": "^5.3.0"
+  },
+  "allowScripts": {
+    "better-sqlite3@12.11.1": true
   }
 }
