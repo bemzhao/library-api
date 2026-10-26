@@ -4,7 +4,7 @@
 
 - 项目说明、技术栈、数据模型、接口、路线图 → `README.md`
 - 分里程碑的详细计划 → `.claude/plan/`
-- 已完成：`001-m1-foundation.md`；当前：`002-m2-loans.md`
+- 已完成：`001-m1-foundation.md`、`002-m2-loans.md`；下一步：M3（计划待写）
 
 ## 关键事实
 

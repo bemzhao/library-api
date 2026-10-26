@@ -26,6 +26,7 @@ npm run dev        # http://localhost:3000
 ```bash
 curl http://localhost:3000/health
 curl http://localhost:3000/books
+curl http://localhost:3000/loans
 ```
 
 ## 目录结构
@@ -62,13 +63,16 @@ curl http://localhost:3000/books
 |---|---|---|
 | GET | `/health` | 健康检查 |
 | GET | `/books?page=1&pageSize=10` | 图书列表（分页，含作者与分类） |
+| POST | `/loans` | 借书（`memberId`、`bookInstanceId` 必填，`days` 可选，默认 30） |
+| POST | `/loans/:id/return` | 还书 |
+| GET | `/loans?status=&memberId=&page=1&pageSize=10` | 借阅列表（`status`：`active` / `overdue` / `returned`） |
 
 ## 路线图
 
-> 每个里程碑的详细计划放在 `.claude/plan/`：001（已完成）、002（进行中）。
+> 每个里程碑的详细计划放在 `.claude/plan/`：001、002（已完成）。
 
 - [x] **M1 地基**：Express + SQLite、7 张表、图书列表接口
-- [ ] **M2 借阅闭环**：借书 `POST /loans`、还书、逾期查询；事务与并发保护
+- [x] **M2 借阅闭环**：借书 `POST /loans`、还书、逾期查询；事务与并发保护
 - [ ] **M3 管理接口**：图书、作者、分类、会员的增删改查；参数校验；统一错误处理
 - [ ] **M4 搜索与统计**：关键字搜索、热门排行、借阅历史；索引与查询优化
 - [ ] **M5 登录鉴权**：会员登录、JWT、管理员与普通会员权限

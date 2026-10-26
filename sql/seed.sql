@@ -28,3 +28,6 @@ INSERT INTO members (name, email) VALUES
 -- 张三借了《三体》第 1 本，30 天后到期
 INSERT INTO loans (book_instance_id, member_id, due_at)
 VALUES (1, 1, datetime('now', '+30 days'));
+
+-- 副本状态要和借阅记录保持一致：借出中的副本不能是 available
+UPDATE book_instances SET status = 'borrowed' WHERE id = 1;
